@@ -23,10 +23,9 @@
  */
 
 // @ts-ignore
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { WebView } from 'react-native-webview';
 import { View, StyleSheet } from 'react-native';
-import { useRef } from 'react';
 
 import { PUBLIC_DOMAIN } from './constants';
 
@@ -76,7 +75,7 @@ export type TurnstileEvent =
 	| 'beforeInteractive'
 	| 'unsupported';
 
-export interface ReactNativeTurnstleEvent {
+export interface ReactNativeTurnstileEvent {
 	event: TurnstileEvent;
 	data?: string;
 }
@@ -176,7 +175,7 @@ export default function ReactNativeTurnstile(props: TurnstileProps) {
 					source={{ uri: url }}
 					onMessage={event => {
 						try {
-							const eventData = JSON.parse(event.nativeEvent.data) as ReactNativeTurnstleEvent;
+							const eventData = JSON.parse(event.nativeEvent.data) as ReactNativeTurnstileEvent;
 							if (!eventData.event)
 								throw new Error('Invalid event received from Turnstile endpoint');
 
