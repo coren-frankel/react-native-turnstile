@@ -25,7 +25,7 @@ npm i react-native-turnstile
 
 ```jsx
 import { useRef } from "react";
-import ReactNativeTurnstile, { resetTurnsile } from "react-native-turnstile";
+import ReactNativeTurnstile, { resetTurnstile } from "react-native-turnstile";
 
 // ...
 
@@ -44,7 +44,7 @@ function TurnstileWidget() {
 	<ReactNativeTurnstile
 		sitekey="xxxxxxxxxxxxxxxxxxx"
 		onVerify={token => console.log(token)}
-		resetRef={resetTurnstileRef}
+		resetRef={turnstileResetRef}
 		style={{ marginLeft: 'auto', marginRight: 'auto' }}
 	/>
   );
