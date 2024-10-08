@@ -1,4 +1,4 @@
-import ReactNativeTurnstile, { resetTurnstile } from './ReactNativeTurnstile';
+import ReactNativeTurnstile, { resetTurnstile, type TurnstileResetRef } from './ReactNativeTurnstile';
 
 export default ReactNativeTurnstile;
-export { resetTurnstile };
+export { resetTurnstile, TurnstileResetRef };
